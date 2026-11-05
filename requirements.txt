@@ -1,0 +1,12 @@
+# The notebook uses the TensorFlow version provided by Google Colab by default.
+# Installing this entire file in Colab is not required; the notebook installs LIME itself.
+# Versions of other packages may vary across Colab runtimes; record runtime versions when publishing results.
+tensorflow
+lime==0.2.0.1
+numpy
+pandas
+matplotlib
+scikit-image
+scikit-learn
+pillow
+ipywidgets

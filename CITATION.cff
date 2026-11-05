@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software in research, please cite this repository."
+type: software
+title: "ResNet50-based Dog and Cat Classification with LIME and Grad-CAM"
+authors:
+  # Public account name used temporarily. Replace with your preferred scholarly name before release.
+  - family-names: "TakaNori999"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/TakaNori999/resnet50-lime-gradcam-dogcat"
+url: "https://github.com/TakaNori999/resnet50-lime-gradcam-dogcat"
+abstract: >-
+  Google Colab notebook for fine-tuning an ImageNet-pretrained ResNet50
+  on binary dog/cat classification and comparing LIME and Grad-CAM
+  explanations for the same model, input image, and target class.
+keywords:
+  - explainable artificial intelligence
+  - ResNet50
+  - LIME
+  - Grad-CAM
+  - image classification
+# After Zenodo issues a real version DOI, add: doi: "10.5281/zenodo.<REAL_ID>"
+# Set date-released to the actual release date once published.
