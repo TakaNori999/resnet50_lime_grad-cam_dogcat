@@ -24,7 +24,7 @@ A **Google Colab notebook** that fine-tunes an ImageNet-pretrained ResNet50 for 
 
    Supported formats: JPG/JPEG, PNG, BMP and WebP. The folder name is merely an example; change `DATA_DIR` in Section 2 if yours differs. To use fewer images for exploration, update `EXPECTED_PER_CLASS` accordingly; this changes the experimental conditions.
 3. In **Section 2**, verify `DATA_DIR`, `OUTPUT_ROOT` and the learning settings. Run the notebook from the beginning and authorize Google Drive access for **your own account**.
-4. After training, set `TEST_IMAGE_PATH` in **Section 10** to an image in your Drive not used for training or validation. The initial value is blank, so this step is optional until you provide a path. Alternatively, set `TEST_IMAGE_DIR` in Section 11 to choose an image from a dropdown.
+4. After training, set `TEST_IMAGE_PATH` in **Section 10** to an image in your Drive not used for training or validation. The initial value is blank, so this step is optional until you provide a path. Optional Sections 11–13 have been removed; change the image path in Section 10 and rerun that cell to compare another image.
 5. The original image, positive LIME overlay and Grad-CAM overlay are generated side-by-side and saved to `OUTPUT_ROOT`, along with diagnostic plots, model weights and metadata for **your** session. These are not uploaded to this repository.
 
 ## Method overview
