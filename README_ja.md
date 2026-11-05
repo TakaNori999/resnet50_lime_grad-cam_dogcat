@@ -2,11 +2,11 @@
 
 [English README](README.md)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TakaNori999/resnet50-lime-gradcam-dogcat/blob/main/notebooks/ResNet50_DogCat_LIME_GradCAM.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TakaNori999/resnet50_lime_grad-cam_dogcat/blob/main/ResNet50_DogCat_LIME_GradCAM.ipynb)
 
 ImageNetで事前学習されたResNet50を犬・猫の2値分類向けにファインチューニングし、**同一の学習済みモデル・入力画像・説明対象クラス**についてLIMEとGrad-CAMの説明画像を比較するGoogle Colabノートブックです。
 
-**公開対象はコードのみです。** 収集した学習画像、テスト画像、学習済みモデル、実行出力は含みません。利用者の画像で学習した結果は、元の研究の出力と一致するとは限りません。
+**公開対象はコードのみです。** 収集した学習画像、テスト画像、学習済みモデル、保存済みの実行出力は現行版に含みません。なお、過去のコミット履歴には以前の実行出力が残る可能性があるため、公開履歴の確認が必要です。利用者の画像で学習した結果は、元の研究の出力と一致するとは限りません。
 
 ## 実行方法
 
@@ -50,8 +50,8 @@ LIMEは正と負の係数を計算したうえで、図には**正の係数の�
 
 コードの利用条件は [MIT License](LICENSE) です。第三者ライブラリや利用者自身の画像などはそれぞれの利用条件に従ってください。
 
-GitHubの **Cite this repository** から引用形式を確認できます。書誌情報は [CITATION.cff](CITATION.cff) に記録してあります。初期設定の著者名はGitHub名 **TakaNori999** です。論文に使う正式な著者名・共著者・ORCIDがあれば、**Zenodoへの初回リリース前**に置き換えてください。
+GitHubの **Cite this repository** から引用形式を確認できます。書誌情報は [CITATION.cff](CITATION.cff) に記録してあります。著者名は **Norihiro Takahashi** として登録しています。共著者・ORCIDがある場合は、Zenodoへの初回リリース前に確認してください。
 
 GitHub Release `v1.0.0` を作成してZenodoと連携すると、アーカイブされたバージョンのDOIを取得できます。**現時点では未発行です。**
 
-実際の公開手順は [GitHub／Zenodo公開ガイド](docs/PUBLISHING_GUIDE_ja.md) を参照してください。
+実際の公開手順は [GitHub／Zenodo公開ガイド](PUBLISHING_GUIDE_ja.md) を参照してください。
