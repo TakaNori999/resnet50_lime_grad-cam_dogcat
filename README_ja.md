@@ -50,8 +50,6 @@ LIMEは正と負の係数を計算したうえで、図には**正の係数の�
 
 コードの利用条件は [MIT License](LICENSE) です。第三者ライブラリや利用者自身の画像などはそれぞれの利用条件に従ってください。
 
-GitHubの **Cite this repository** から引用形式を確認できます。書誌情報は [CITATION.cff](CITATION.cff) に記録してあります。著者名は **Norihiro Takahashi** として登録しています。共著者・ORCIDがある場合は、Zenodoへの初回リリース前に確認してください。
+GitHubの **Cite this repository** から引用形式を確認できます。書誌情報は [CITATION.cff](CITATION.cff) に記録してあります。著者名は **Norihiro Takahashi** として登録しています。共著者・ORCIDがある場合は、引用情報を更新する際に確認してください。
 
-GitHub Release `v1.0.0` を作成してZenodoと連携すると、アーカイブされたバージョンのDOIを取得できます。**現時点では未発行です。**
-
-実際の公開手順は [GitHub／Zenodo公開ガイド](PUBLISHING_GUIDE_ja.md) を参照してください。
+公開時の注意点は [GitHub公開ガイド](PUBLISHING_GUIDE_ja.md) を参照してください。
