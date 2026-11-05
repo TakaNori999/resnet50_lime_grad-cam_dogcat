@@ -1,80 +1,44 @@
-# GitHubとZenodoへの公開手順（日本語）
+# GitHub公開・Colab・Zenodo連携ガイド（2026年11月時点）
 
-**公開対象**：ソースコード（`.ipynb`）・README・MIT License・CITATION.cff・requirements.txt・.gitignore。**非公開**：犬猫各100枚の学習画像、テスト画像、学習済みモデル、ノートブックの過去の実行出力。
+現在のリポジトリ: [TakaNori999/resnet50_lime_grad-cam_dogcat](https://github.com/TakaNori999/resnet50_lime_grad-cam_dogcat)
 
-## 0. 公開前の確認（重要）
+## 1. 公開対象と公開しないもの
+- 公開: `ResNet50_DogCat_LIME_GradCAM.ipynb`、README、MIT License、CITATION.cff、requirements.txt、.gitignore
+- 非公開: 犬・猫の画像、テスト画像、学習済みモデル、実行結果に含まれる画像。
+- Google Drive上に学習画像を自分で用意します。デフォルトは `MyDrive/dog_cat_100images/cat/` と `dog/` に各100枚です。
+- 実験フローの再実行はできますが、学習データや重みを含まないため元の結果を完全再現する保証はありません。
 
-- ZIPファイルを展開してください。**ZIPをそのままGitHubの1ファイルとしてアップロードしない**でください。展開した中身をリポジトリのルートに配置します。
-- `notebooks/ResNet50_DogCat_LIME_GradCAM.ipynb` の出力は全セル削除済みです。公開前に画像・秘密情報が残っていないかご自身でも確認してください。**公開前に画像付きで再実行してそのままコミットしない**でください。
-- `CITATION.cff` と `LICENSE` の著者表示は現在 `TakaNori999` です。正式な研究者名、共著者、ORCID、著作権者が別にある場合は**初回リリース前に修正**してください。
-- MITの適用対象は、あなたが利用権限を持つこのリポジトリのコードです。第三者の著作物・依存ライブラリ・画像の権利まで移転させません。既存コードを流用している場合、元のライセンスもご確認ください。
-- 学習データは公開されないため、他者が**実験フローを再実行**することはできますが、公開論文のモデルや数値結果を厳密に再現できることは保証しません。
+## 2. Open in Colab
+[Open in Colab](https://colab.research.google.com/github/TakaNori999/resnet50_lime_grad-cam_dogcat/blob/main/ResNet50_DogCat_LIME_GradCAM.ipynb) をクリックしてください。
+ColabでGPUランタイムを選び、冒頭から実行します。第2節で `DATA_DIR` を設定し、最終画像を比較する場合のみ第10節の `TEST_IMAGE_PATH` または第11節の `TEST_IMAGE_DIR` を指定してください。初期値は空欄です。
 
-## 1. GitHubリポジトリを作る
+## 3. 変更・更新
+GitHubのルート直下 `ResNet50_DogCat_LIME_GradCAM.ipynb` を、同じパス・名前で更新します。公開前に、Colabで「すべての出力を消去」してから保存することを推奨します。
+リポジトリは既に公開済みなので、ZIPの初期アップロード手順は不要です。
 
-1. GitHubの [新規リポジトリ作成](https://github.com/new) を開きます。
-2. Owner：`TakaNori999`、Repository name：`resnet50-lime-gradcam-dogcat`、Visibility：`Public`。
-3. 説明文（例）：`Colab notebook for ResNet50 fine-tuning and LIME/Grad-CAM comparison (code only)`。
-4. 今回はローカルにREADME/LICENSEが既にあるので、初期化時の **Add README, Add .gitignore, Choose a license** はすべて不要です。
-5. **Create repository** を押します。
+## 4. 著者・ライセンス・引用
+- `CITATION.cff` の著者名は **Norihiro Takahashi** です。必要に応じて共著者・ORCIDを追加してください。
+- `LICENSE` はMIT Licenseです。依存ライブラリや利用者が用意した画像のライセンスは別です。
+- DOIはZenodoで発行されてから `CITATION.cff` とREADMEに正しい番号を追記します。未発行のDOIを記載しないでください。
 
-公開予定URL（作成後に有効）: https://github.com/TakaNori999/resnet50-lime-gradcam-dogcat
+## 5. ZenodoとGitHub Release
+1. [Zenodo](https://zenodo.org/) でGitHub認証・連携を有効にします。
+2. 対象のGitHubリポジトリ `TakaNori999/resnet50_lime_grad-cam_dogcat` を有効にします。
+3. 公開予定ファイルに不備がないことを確認してから、GitHub Releasesで `v1.0.0` を公開します。
+4. Zenodoのアーカイブが成功し、バージョンDOIが発行されたことを確認します。
+5. DOIをREADMEと `CITATION.cff` に反映し、引用時には論文に対応するバージョンDOIを使います。
 
-## 2. ファイルをアップロード
+公式: https://help.zenodo.org/docs/github/
 
-**方法A：ブラウザ** — ZIPを展開し、GitHubのリポジトリで **Add file → Upload files** を選択します。展開したフォルダ内の各ファイルと`notebooks/`、`docs/`を保持してアップロードします。ブラウザ上で階層が維持できないときは、サブフォルダを個別に作成するかGitHub Desktopを利用します。保存先がリポジトリのルートになるようにしてください。
+## 6. 重要：Git履歴と非公開画像
+**現行ノートブックの出力削除は、過去のコミット履歴を消去しません。**
+一度公開した画像・実行出力は、旧コミットから閲覧・複製できる可能性があります。履歴からの完全な除去が必要な場合は、GitHub公式の機密情報削除手順に沿った履歴の書き換え・対応を検討してください。履歴書き換えはコミットSHAや既存のリンクに影響します。既に取得・複製された第三者側のコピーまでは消せません。
+参考: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
 
-**方法B：Gitコマンド** — ZIPを展開したフォルダを開き、次のコマンドを実行します（gitがインストール済みで、GitHub認証が設定済みの場合）。
-
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Initial public code release"
-git remote add origin https://github.com/TakaNori999/resnet50-lime-gradcam-dogcat.git
-git push -u origin main
-```
-
-## 3. Open in Colabを確認する
-
-- [Open in ColabのURL（リポジトリ作成後に有効）](https://colab.research.google.com/github/TakaNori999/resnet50-lime-gradcam-dogcat/blob/main/notebooks/ResNet50_DogCat_LIME_GradCAM.ipynb)
-- GitHubのREADMEにもバッジを組み込んであります。
-- Colabで開いたら、**利用者自身**がDrive上に`cat/`・`dog/`を用意し、第2節のパスを設定します。
-- リポジトリへの公開と、Colab上のユーザーアカウントのDrive内データは独立しています。
-
-## 4. CITATION.cffの確認
-
-- `CITATION.cff`をルートに置くと、GitHubのリポジトリ画面に**Cite this repository**が現れます。
-- `authors`（正式名・共著者・ORCIDなど）をZenodo初回リリースの前に確定してください。
-- 初期ファイルには**実在しないDOIやリリース日を記載していません**。
-
-GitHub公式: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files
-
-## 5. Zenodoと連携してバージョンDOIを取得する
-
-1. https://zenodo.org/ にアクセスし、GitHubアカウントで登録・ログイン（あるいはLinked accountsから連携）。
-2. プロフィールの **GitHub** を開き、 **Sync now** でリポジトリ一覧を更新します。
-3. `TakaNori999/resnet50-lime-gradcam-dogcat` を探し、連携トグルを有効にします。
-4. GitHubで **Releases → Draft a new release**。タグ `v1.0.0` を作成して公開します。
-5. Zenodoでアーカイブ完了を確認し、**実際に発行されたバージョンDOI**を控えます。
-6. READMEとCITATION.cffの`doi`に発行済みのDOIを追記します。その変更をGitHubにコミットしてください。
-7. 論文には、解析に使用した**特定バージョン**のDOIを引用します。Zenodoには複数版を束ねるConcept DOIと、個別バージョンのDOIがあります。
-
-Zenodo公式: https://help.zenodo.org/docs/github/enable-repository/ および https://help.zenodo.org/docs/github/archive-software/github-upload/
-
-**重要：** GitHubへのアップロードだけではZenodo DOIは付与されません。リポジトリ公開後のZenodo連携とRelease公開が必要です。
-
-## 6. 公開後の確認
-
-- READMEの「Open in Colab」が開く。
-- `notebooks/`内のノートブックの**出力セルが空**であり、非公開画像を含まない。
-- `LICENSE`がGitHubの画面でMITと認識される。
-- `Cite this repository`が表示される。
-- Zenodoの記録にGitHub Release、バージョン、発行DOIが対応している。
-
-## 参考となる公式ページ
-
-- GitHub ファイルの追加: https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
-- GitHub DOIの案内: https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
-- Zenodo GitHub integration: https://help.zenodo.org/docs/github/
-- Google Colab FAQ: https://research.google.com/colaboratory/faq.html
+## 7. 公開チェック
+- README (英語・日本語) とCITATION.cffのURLが現行リポジトリを指しているか
+- Open in Colabでルート直下のノートブックが開くか
+- 現行ノートブックに画像・実行出力・ウィジェット状態がないか
+- 個人情報・画像データを追加コミットしていないか
+- `.gitignore` が正しいファイル名か
+- 初回Release前に著者、コード動作、実験条件、依存関係、画像の権利を最終確認したか
