@@ -8,7 +8,7 @@ authors:
 version: "1.0.0"
 license: MIT
 repository-code: "https://github.com/TakaNori999/resnet50_lime_grad-cam_dogcat"
-url: "https://github.com/TakaNori999/resnet50-lime-gradcam-dogcat"
+url: "https://github.com/TakaNori999/resnet50_lime_grad-cam_dogcat"
 abstract: >-
   Google Colab notebook for fine-tuning an ImageNet-pretrained ResNet50
   on binary dog/cat classification and comparing LIME and Grad-CAM
