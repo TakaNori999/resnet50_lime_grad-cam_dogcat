@@ -6,7 +6,7 @@
 
 A **Google Colab notebook** that fine-tunes an ImageNet-pretrained ResNet50 for binary dog/cat classification and visualizes **LIME and Grad-CAM explanations for the same model, input image, and target class**.
 
-**Code only:** The training images, test images, trained model files, and previous execution outputs are **not included**. Users must provide their own images. The output of a newly trained model may differ from figures published elsewhere.
+**Code only:** The training images, test images, trained model files, and saved execution outputs are **not included in the current notebook**. Users must provide their own images. The output of a newly trained model may differ from figures published elsewhere.
 
 ## Quick start
 
@@ -45,7 +45,7 @@ Important: The **numerical magnitudes of LIME coefficients and Grad-CAM maps are
 
 ## Reproducibility and limitations
 
-- The original images were obtained from third-party websites; their redistribution rights are not available. No image files are included here.
+- The original images were obtained from third-party websites, and redistribution rights have not been confirmed. No image files are included in the current repository snapshot. Earlier commits may retain notebook outputs; see the Japanese publishing guide.
 - The notebook relies on Google Colab/Google Drive, Internet access to retrieve ImageNet weights and install LIME, and the available Colab runtime. Compute resources and library versions can change.
 - Original data, model weights, and execution outputs are **not archived in GitHub or Zenodo**; this repository supports reproducing the **workflow**, not the exact trained model or published predictions.
 - The notebook uses `lime==0.2.0.1`. Check runtime/package versions saved in its per-run metadata. If numerical reproduction is essential, retain your own environment snapshot, your own data, and your own saved model weights.
@@ -61,10 +61,9 @@ Important: The **numerical magnitudes of LIME coefficients and Grad-CAM maps are
 ├── CITATION.cff
 ├── requirements.txt
 ├── .gitignore
-├── notebooks/
-│   └── ResNet50_DogCat_LIME_GradCAM.ipynb
-└── docs/
-    └── PUBLISHING_GUIDE_ja.md
+├── ResNet50_DogCat_LIME_GradCAM.ipynb
+├── PUBLISHING_GUIDE_ja.md
+└── .gitignore
 ```
 
 ## License
@@ -75,8 +74,8 @@ The code in this repository is provided under the [MIT License](LICENSE). Third-
 
 See [CITATION.cff](CITATION.cff) and the **Cite this repository** link displayed by GitHub. Version `v1.0.0` is the planned first release. Once archived through Zenodo, add the **actual** version DOI to this file and the README. **No DOI has been assigned yet.**
 
-Author metadata currently uses the provided GitHub handle **TakaNori999** as a temporary public display name. Before the first DOI release, replace it with the preferred scholarly author name and add coauthors/ORCID identifiers where appropriate.
+The citation author is **Norihiro Takahashi**. Confirm any coauthors and ORCID identifiers before the first DOI release.
 
 ## GitHub / Zenodo publishing
 
-Instructions in Japanese: [Publishing guide](docs/PUBLISHING_GUIDE_ja.md).
+Instructions in Japanese: [Publishing guide](PUBLISHING_GUIDE_ja.md).
