@@ -47,7 +47,7 @@ Important: The **numerical magnitudes of LIME coefficients and Grad-CAM maps are
 
 - The original images were obtained from third-party websites, and redistribution rights have not been confirmed. No image files are included in the current repository snapshot. Earlier commits may retain notebook outputs; see the Japanese publishing guide.
 - The notebook relies on Google Colab/Google Drive, Internet access to retrieve ImageNet weights and install LIME, and the available Colab runtime. Compute resources and library versions can change.
-- Original data, model weights, and execution outputs are **not archived in GitHub or Zenodo**; this repository supports reproducing the **workflow**, not the exact trained model or published predictions.
+- Training data, trained weights, and current notebook outputs are not distributed as part of the current files. This repository supports reproducing the **workflow**, not the exact trained model or published predictions.
 - The notebook uses `lime==0.2.0.1`. Check runtime/package versions saved in its per-run metadata. If numerical reproduction is essential, retain your own environment snapshot, your own data, and your own saved model weights.
 - If adapting the code for redistribution, comply with the licenses of any third-party dependencies and any dataset used.
 
@@ -62,8 +62,7 @@ Important: The **numerical magnitudes of LIME coefficients and Grad-CAM maps are
 ├── requirements.txt
 ├── .gitignore
 ├── ResNet50_DogCat_LIME_GradCAM.ipynb
-├── PUBLISHING_GUIDE_ja.md
-└── .gitignore
+└── PUBLISHING_GUIDE_ja.md
 ```
 
 ## License
@@ -72,10 +71,10 @@ The code in this repository is provided under the [MIT License](LICENSE). Third-
 
 ## How to cite
 
-See [CITATION.cff](CITATION.cff) and the **Cite this repository** link displayed by GitHub. Version `v1.0.0` is the planned first release. Once archived through Zenodo, add the **actual** version DOI to this file and the README. **No DOI has been assigned yet.**
+See [CITATION.cff](CITATION.cff) and the **Cite this repository** link displayed by GitHub for software citation metadata.
 
-The citation author is **Norihiro Takahashi**. Confirm any coauthors and ORCID identifiers before the first DOI release.
+The citation author is **Norihiro Takahashi**. Verify coauthor and ORCID details when updating the citation metadata.
 
-## GitHub / Zenodo publishing
+## Publishing notes
 
 Instructions in Japanese: [Publishing guide](PUBLISHING_GUIDE_ja.md).
