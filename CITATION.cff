@@ -3,8 +3,8 @@ message: "If you use this software in research, please cite this repository."
 type: software
 title: "ResNet50-based Dog and Cat Classification with LIME and Grad-CAM"
 authors:
-  # Public account name used temporarily. Replace with your preferred scholarly name before release.
-  - family-names: "TakaNori999"
+  - family-names: "Takahashi"
+    given-names: "Norihiro"
 version: "1.0.0"
 license: MIT
 repository-code: "https://github.com/TakaNori999/resnet50-lime-gradcam-dogcat"
@@ -19,5 +19,3 @@ keywords:
   - LIME
   - Grad-CAM
   - image classification
-# After Zenodo issues a real version DOI, add: doi: "10.5281/zenodo.<REAL_ID>"
-# Set date-released to the actual release date once published.
