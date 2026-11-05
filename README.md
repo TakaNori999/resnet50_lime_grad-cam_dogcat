@@ -2,7 +2,7 @@
 
 [日本語版 README](README_ja.md)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TakaNori999/resnet50-lime-gradcam-dogcat/blob/main/notebooks/ResNet50_DogCat_LIME_GradCAM.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TakaNori999/resnet50_lime_grad-cam_dogcat/blob/main/ResNet50_DogCat_LIME_GradCAM.ipynb)
 
 A **Google Colab notebook** that fine-tunes an ImageNet-pretrained ResNet50 for binary dog/cat classification and visualizes **LIME and Grad-CAM explanations for the same model, input image, and target class**.
 
