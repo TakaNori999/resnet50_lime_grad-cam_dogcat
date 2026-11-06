@@ -1,5 +1,14 @@
 # GitHub公開ガイド（2026年11月時点）
 
+## v1.0.0の公開・DOI発行状況
+
+- GitHub Release: [v1.0.0](https://github.com/TakaNori999/resnet50_lime_grad-cam_dogcat/releases/tag/v1.0.0)
+- Zenodo: **Published（公開済み）**
+- DOI: **[10.5281/zenodo.23992583](https://doi.org/10.5281/zenodo.23992583)**
+- 公開版のREADMEおよびCITATION.cffにDOIを追記済み。Zenodoのv1.0.0は公開時点のスナップショットであり、その後のGitHub上の変更は自動的に反映されません。
+
+
+
 公開先: [TakaNori999/resnet50_lime_grad-cam_dogcat](https://github.com/TakaNori999/resnet50_lime_grad-cam_dogcat)
 
 ## 公開範囲
