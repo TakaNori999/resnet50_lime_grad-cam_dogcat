@@ -3,6 +3,7 @@
 [English README](README.md)
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TakaNori999/resnet50_lime_grad-cam_dogcat/blob/main/ResNet50_DogCat_LIME_GradCAM.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23992583.svg)](https://doi.org/10.5281/zenodo.23992583)
 
 ImageNetで事前学習されたResNet50を犬・猫の2値分類向けにファインチューニングし、**同一の学習済みモデル・入力画像・説明対象クラス**についてLIMEとGrad-CAMの説明画像を比較するGoogle Colabノートブックです。
 
@@ -50,6 +51,6 @@ LIMEは正と負の係数を計算したうえで、図には**正の係数の�
 
 コードの利用条件は [MIT License](LICENSE) です。第三者ライブラリや利用者自身の画像などはそれぞれの利用条件に従ってください。
 
-GitHubの **Cite this repository** から引用形式を確認できます。書誌情報は [CITATION.cff](CITATION.cff) に記録してあります。著者名は **Norihiro Takahashi** として登録しています。共著者・ORCIDがある場合は、引用情報を更新する際に確認してください。
+GitHub Release **v1.0.0** をZenodoに保存し、DOI **[10.5281/zenodo.23992583](https://doi.org/10.5281/zenodo.23992583)** が発行されました。引用情報は [CITATION.cff](CITATION.cff) またはGitHubの **Cite this repository** で確認できます。著者名は **Norihiro Takahashi** として登録しています。Zenodoに保存されたv1.0.0は公開時点のスナップショットであり、今回のREADME・引用情報の追記は既存のZenodoアーカイブ自体には反映されません。
 
 公開時の注意点は [GitHub公開ガイド](PUBLISHING_GUIDE_ja.md) を参照してください。
