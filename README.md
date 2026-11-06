@@ -3,6 +3,7 @@
 [日本語版 README](README_ja.md)
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TakaNori999/resnet50_lime_grad-cam_dogcat/blob/main/ResNet50_DogCat_LIME_GradCAM.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23992583.svg)](https://doi.org/10.5281/zenodo.23992583)
 
 A **Google Colab notebook** that fine-tunes an ImageNet-pretrained ResNet50 for binary dog/cat classification and visualizes **LIME and Grad-CAM explanations for the same model, input image, and target class**.
 
@@ -71,7 +72,7 @@ The code in this repository is provided under the [MIT License](LICENSE). Third-
 
 ## How to cite
 
-See [CITATION.cff](CITATION.cff) and the **Cite this repository** link displayed by GitHub for software citation metadata.
+Version **v1.0.0** is published on GitHub and archived on Zenodo with DOI **[10.5281/zenodo.23992583](https://doi.org/10.5281/zenodo.23992583)**. For citation metadata, see [CITATION.cff](CITATION.cff) or the GitHub **Cite this repository** link. The Zenodo archive is a snapshot of the released version; changes made later to GitHub README files do not alter that snapshot.
 
 The citation author is **Norihiro Takahashi**. Verify coauthor and ORCID details when updating the citation metadata.
 
